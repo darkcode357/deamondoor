@@ -53,11 +53,11 @@ def winupdate(): #chama bind no sistema , enganar engenharia reversa com confunc
 	from os import system
 
 	def gera_senha(tamanho):
-			catacteres = '0123456789abcdefghijlmnopqrstuwvxyzABCDEFGHIJKLMNOPQRSTUWVXYZ!@#$%^&*()_+}|]\[]\'/?<>'
-			senha = ''
-			for char in range(tamanho):
-					senha += choice(catacteres)
-			return (senha)
+		catacteres = '0123456789abcdefghijlmnopqrstuwvxyzABCDEFGHIJKLMNOPQRSTUWVXYZ!@#$%^&*()_+}|]\[]\'/?<>'
+		senha = ''
+		for _ in range(tamanho):
+			senha += choice(catacteres)
+		return (senha)
 
 	gera = gera_senha(32) # gerador da chave aes 32 versao 2 ira vim com suporta utf8 para acento nas palavras
 	secret = gera
